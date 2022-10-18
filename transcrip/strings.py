@@ -1,0 +1,20 @@
+from django.utils.translation import ugettext as _
+strings = {'addTranscrip': _("Agregar Grabación"),
+            'code': _('Código'),
+            'city': _('Ciudad'),
+            'country': _('País'),
+            'descrip': _('Ficha Técnica'),
+            'transcrip': _('Grabación'),
+            'audio':_('Audio'),
+            'add': _('Agregar'),
+            'home':_('Inicio'),
+            'logout':_('Cerrar Sesión'),
+            'login':_('Iniciar Sesión'),
+            'user':_('Usuario'),
+            'first':_('Primera'),
+            'next':_('Siguiente'),
+            'previous':_('Anterior'),
+            'last':_('Ultima'),
+            'page':_('Página'),
+            'document':_('Documento')
+            }

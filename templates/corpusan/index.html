@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Inicio</title>
+    <link href="http://localhost:8000/css/index.css" rel="stylesheet" >
+</head>
+<body>
+
+    {% block body %}
+    <div class="about-section">
+        <h1>CorpuSan</h1>
+        <p align="left">El  corpus CorpuSan  es  un  corpus  de  conversaciones  coloquiales obtenidas  en  las  distintas  ciudades  que se integran  en  el proyecto. Esta  base  de  datos  será  de  acceso  libre  para  todos los  investigadores  que  lo  deseen. Aqui aparecen las grabacianes de las conversaciones junto a la transcripción y la ficha técnica de  la misma.   </p>
+        
+      </div>
+      <div class="about-section">
+        <div>
+            <button onclick="window.location.href='/transcrip/'" > <h2>Grabaciones</h2> </button>
+        </div>        
+    </div>
+    {% endblock %}
+</body>
+</html>

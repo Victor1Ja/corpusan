@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    {% block body %}
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <form class="card card-sm">
+                <div class="card-body row no-gutters align-items-center">                    
+                        <div class="col">
+                            <input type="search" name='code' placeholder="{{strings.code}}" 
+                            class="from-control form-control-borderless">
+                        </div>
+                        <div class="col">
+                            <input type="search" name='city' placeholder="{{strings.city}}" 
+                            class="from-control form-control-borderless" >
+                        </div>
+                        <div class="col">
+                            <input type="search" name='country' placeholder="{{strings.country}}" 
+                            class="from-control form-control-borderless" >
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-success" type="submit">
+                                Buscar
+                            </button>
+                        </div>                    
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center" >
+        <div class="col-md-3 ">
+            <ul class="pagination">
+                {% if transcrips.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page=1">{{strings.first}} </a>
+                    </li> 
+                    <li class="page-item ">
+                        <a class="page-link" href="?page={{ transcrips.previous_page_number }}">{{strings.previous}} </a>
+                    </li> 
+                    
+                {% endif %}
+
+                <li class="page-item active">
+                    <a class="page-link" href="#"> {{strings.page}}:{{ transcrips.number }} de {{ transcrips.paginator.num_pages }} </a>
+                </li> 
+                
+                {% if transcrips.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ transcrips.next_page_number }}">{{strings.next}} </a>
+                </li> 
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ transcrips.paginator.num_pages }}">{{strings.last}} </a>
+                </li>                                                 
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-10 ">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="text-align: center; vertical-align: middle;" id="code-column" scope="col">{{strings.code}}</th>
+                        <th style="text-align: center; vertical-align: middle;" id="city-column" scope="col">{{strings.city}}</th>
+                        <th style="text-align: center; vertical-align: middle;" id="country-column" scope="col">{{strings.country}}</th>
+                        <th style="text-align: center; vertical-align: middle;" id="audio-column" scope="col" colspan="2">{{strings.audio}}</th>
+                        <th style="text-align: center; vertical-align: middle;" id="file-column" scope="col">{{strings.descrip}}</th>
+                        <th style="text-align: center; vertical-align: middle;" id="transcrip-column" scope="col">{{strings.transcrip}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transcrip in transcrips %}
+                        <tr>
+                            <td style="text-align: center; vertical-align: middle;">{{transcrip.code}}</td>
+                            <td style="text-align: center; vertical-align: middle;">{{transcrip.city}}</td>
+                            <td style="text-align: center; vertical-align: middle;">{{transcrip.country}}</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <audio src="{{transcrip.audio.url}}" preload="none" controls> </audio>
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;" >
+                                <a href="{{transcrip.audio.url}}" download ="{{transcrip.audio.name}}" > 
+                                    <img src="https://cdn.icon-icons.com/icons2/904/PNG/512/download-1_icon-icons.com_69664.png" alt="Download" style="width:32px;height:32px;" > 
+                                </a>
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;" >
+                                <a href="{{transcrip.descrip.url}}"> 
+                                    <img src="https://cdn.icon-icons.com/icons2/904/PNG/512/download-1_icon-icons.com_69664.png" alt="Download" style="width:32px;height:32px;">
+                                </a>
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;" >
+                                <a href="{{transcrip.transcrip.url}}"> 
+                                    <img src="https://cdn.icon-icons.com/icons2/904/PNG/512/download-1_icon-icons.com_69664.png" alt="Download" style="width:32px;height:32px;">
+                                </a></td>
+                        </tr>
+
+                    {%endfor%}
+                    {% if user.is_authenticated %}
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;" style="text-align: center" scope="row" colspan="6"> 
+                            <div  class="row justify-content-center">
+                                <a href="{% url 'transcrip:add' %}">{{strings.addTranscrip}}</a>
+                            </div> 
+                        </td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-04 19:46-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: corpusan/settings.py:112
+msgid "Español"
+msgstr "Spanish"
+
+#: corpusan/settings.py:113
+msgid "English"
+msgstr "English"
+
+#: transcrip/forms.py:10 transcrip/strings.py:3
+msgid "Código"
+msgstr "Code"
+
+#: transcrip/forms.py:11 transcrip/strings.py:4
+msgid "Ciudad"
+msgstr "City"
+
+#: transcrip/forms.py:12 transcrip/strings.py:5
+msgid "País"
+msgstr "Country"
+
+#: transcrip/forms.py:13 transcrip/strings.py:6
+msgid "Descripción"
+msgstr "Description"
+
+#: transcrip/forms.py:14 transcrip/strings.py:7
+msgid "Transcripción"
+msgstr "Transcription"
+
+#: transcrip/forms.py:15 transcrip/strings.py:8
+msgid "Audio"
+msgstr "Mp3"
+
+#: transcrip/strings.py:2
+msgid "Agregar Transcripción"
+msgstr "Add trasnciption"
+
+#: transcrip/strings.py:9
+msgid "Agregar"
+msgstr "Add"
+
+#: transcrip/strings.py:10
+msgid "Inicio"
+msgstr "Home"
+
+#: transcrip/strings.py:11
+msgid "Cerrar Sesión"
+msgstr "Log Out"
+
+#: transcrip/strings.py:12
+msgid "Iniciar Sesión"
+msgstr "Log In"
+
+#: transcrip/strings.py:13
+msgid "Usuario"
+msgstr "User"
+
+#: transcrip/strings.py:14
+msgid "Primera"
+msgstr "First"
+
+#: transcrip/strings.py:15
+msgid "Siguiente"
+msgstr "Next"
+
+#: transcrip/strings.py:16
+msgid "Anterior"
+msgstr "Previous"
+
+#: transcrip/strings.py:17
+msgid "Ultima"
+msgstr "Last"
+
+#: transcrip/strings.py:18
+msgid "Página"
+msgstr "Page"
