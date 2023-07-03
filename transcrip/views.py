@@ -20,7 +20,7 @@ def index(request):
     """
 
     transcrip = Transcrip.objects.all()
-    transcrip = transcrip.filter(code__icontains = '_')
+    # transcrip = transcrip.filter(code__icontains = '_')
 #    print(transcrip)
     code  = request.GET.get('code')
     city  = request.GET.get('city')

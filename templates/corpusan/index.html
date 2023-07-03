@@ -2,20 +2,23 @@
 <head>
     <title>Inicio</title>
     <link href="http://localhost:8000/css/index.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
 
     {% block body %}
-    <div class="about-section">
-        <h1>CorpuSan</h1>
-        <p align="left">El  corpus CorpuSan  es  un  corpus  de  conversaciones  coloquiales obtenidas  en  las  distintas  ciudades  que se integran  en  el proyecto. Esta  base  de  datos  será  de  acceso  libre  para  todos los  investigadores  que  lo  deseen. Aqui aparecen las grabacianes de las conversaciones junto a la transcripción y la ficha técnica de  la misma.   </p>
-        
-      </div>
-      <div class="about-section">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <div class="navbar-brand ">
+            <h1 class="white_text">CorpuSan</h1>
+        </div>
         <div>
+            <p align="left" class="white_text">El  corpus CorpuSan  es  un  corpus  de  conversaciones  coloquiales obtenidas  en  las  distintas  ciudades  que se integran  en  el proyecto. Esta  base  de  datos  será  de  acceso  libre  para  todos los  investigadores  que  lo  deseen. Aqui aparecen las grabacianes de las conversaciones junto a la transcripción y la ficha técnica de  la misma.   </p>
+        </div>
+      </div>
+    </nav>
+    <div class="center">
             <button onclick="window.location.href='/transcrip/'" > <h2>Grabaciones</h2> </button>
-        </div>        
-    </div>
+    </div>        
     {% endblock %}
 </body>
 </html>

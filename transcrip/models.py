@@ -17,4 +17,5 @@ class Transcrip(models.Model):
     country = models.CharField(max_length=100, default="Desconocido")
     descrip = models.FileField(upload_to='pdf_files')
     transcrip = models.FileField(upload_to='pdf_files')
+    authorization = models.FileField(upload_to='pdf_files')
     audio = models.FileField(upload_to='audio_files')

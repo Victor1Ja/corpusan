@@ -72,6 +72,7 @@
                         <th style="text-align: center; vertical-align: middle;" id="audio-column" scope="col" colspan="2">{{strings.audio}}</th>
                         <th style="text-align: center; vertical-align: middle;" id="file-column" scope="col">{{strings.descrip}}</th>
                         <th style="text-align: center; vertical-align: middle;" id="transcrip-column" scope="col">{{strings.transcrip}}</th>
+                        <th style="text-align: center; vertical-align: middle;" id="transcrip-column" scope="col">{{strings.authorization}}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,20 +90,26 @@
                                 </a>
                             </td>
                             <td style="text-align: center; vertical-align: middle;" >
-                                <a href="{{transcrip.descrip.url}}"> 
+                                <a href="{{transcrip.descrip.url}}" download ="{{transcrip.descrip.name}}"> 
                                     <img src="https://cdn.icon-icons.com/icons2/904/PNG/512/download-1_icon-icons.com_69664.png" alt="Download" style="width:32px;height:32px;">
                                 </a>
                             </td>
                             <td style="text-align: center; vertical-align: middle;" >
-                                <a href="{{transcrip.transcrip.url}}"> 
+                                <a href="{{transcrip.transcrip.url}}" download ="{{transcrip.transcrip.name}}"> 
                                     <img src="https://cdn.icon-icons.com/icons2/904/PNG/512/download-1_icon-icons.com_69664.png" alt="Download" style="width:32px;height:32px;">
-                                </a></td>
+                                </a>
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;" >
+                                <a href="{{transcrip.authorization.url}}" download ="{{transcrip.authorization.name}}"> 
+                                    <img src="https://cdn.icon-icons.com/icons2/904/PNG/512/download-1_icon-icons.com_69664.png" alt="Download" style="width:32px;height:32px;">
+                                </a>
+                            </td>
                         </tr>
 
                     {%endfor%}
                     {% if user.is_authenticated %}
                     <tr>
-                        <td style="text-align: center; vertical-align: middle;" style="text-align: center" scope="row" colspan="6"> 
+                        <td style="text-align: center; vertical-align: middle;" style="text-align: center" scope="row" colspan="8"> 
                             <div  class="row justify-content-center">
                                 <a href="{% url 'transcrip:add' %}">{{strings.addTranscrip}}</a>
                             </div> 

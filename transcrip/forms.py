@@ -12,5 +12,6 @@ class TranscripForm(forms.ModelForm):
             'country': 'País',
             'descrip': 'Ficha Técnica',
             'transcrip': 'Transcripción',
+            'authorization':'Consentimientos',
             'audio':'Grabación'
         }
